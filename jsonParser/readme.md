@@ -3,4 +3,4 @@ This python [script](/jsonParser/json_parser.py) was created to load a json file
 
 Ex. Use case
 
-We were looking to ingest qualys inventory data and the json blob that came back on a particular asset was 355kb which for most SIEMs is bigger than they can handle for a single event (most are capped at like <64kb)
+We were looking to ingest qualys inventory data and the json blob that came back on a particular asset was 355kb which for most SIEMs is bigger than they can handle for a single event (most are capped at like <64kb). This JSON parser, strips out whatever object you want/need to trim the file and then writes it to another for safe keeping or reconstruction later. 
