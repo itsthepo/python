@@ -5,7 +5,7 @@ This is meant to be a quick and easy way to send data to your POV instances or d
 | Log Source Function | Vendors | 
 | :-------------: |:-------------:|
 | [Firewalls](/loggen/data_sources/firewall/)     | [Palo](/loggen/data_sources/firewall/palo/palo_traffic.yaml), [FortiNet - WIP](/loggen/data_sources/firewall/fortinet/fortinet.yaml)
-| [EDR](/loggen/data_sources/edr/)     | [Crowdstrike](/loggen/data_sources/edr/crowdstrike/cs.yaml), [Sentinel One - WIP](/loggen/data_sources/edr/sentinelone/sentinelone.yaml)
+| [EDR](/loggen/data_sources/edr/)     | [Crowdstrike - WIP](/loggen/data_sources/edr/crowdstrike/cs.yaml), [Sentinel One - WIP](/loggen/data_sources/edr/sentinelone/sentinelone.yaml)
 | [DNS](/loggen/data_sources/dns/) | [Bind DNS](/loggen/data_sources/dns/dns.yaml)
 | [Web](/loggen/data_sources/web/) | [Apache](/loggen/data_sources/web/apache/apache2_4.yaml), [Nginx - WIP](/loggen/data_sources/web/nginx/nginx.yaml)        
 
