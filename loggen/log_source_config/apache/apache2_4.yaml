@@ -1,0 +1,42 @@
+name: Apache General Access
+file: /Users/brborodach/projects/python/loggen/example_logs/apache_access.txt
+format: "{log_ip} - - [{log_time} +0000] \"{log_method} {log_path} HTTP/1.1\" {log_status} {user_agent} {log_bytes}"
+frequency:
+  seconds: 5
+offset:
+  seconds: 0
+jitter:
+  seconds: 5
+amount: 50
+fields:
+  log_ip:
+    type: ip
+  log_time:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  log_method:
+    type: enum
+    values: [POST, GET, PUT, PATCH, DELETE]
+  log_path:
+    type: enum
+    values:
+      - /auth
+      - /alerts
+      - /events
+      - /playbooks
+      - /lists
+      - /fieldsets
+      - /customers
+      - /collectors
+      - /parsers
+      - /users
+  log_status:
+    type: enum
+    values: [200, 201, 204, 300, 301, 400, 401, 403, 404, 500, 503]
+  user_agent:
+    type: enum
+    values: ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9", Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 ]
+  log_bytes:
+    type: integer
+    min: 2000
+    max: 5000

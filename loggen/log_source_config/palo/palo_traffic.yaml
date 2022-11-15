@@ -1,0 +1,269 @@
+name: Palo Traffic
+file: /Users/brborodach/projects/python/loggen/example_logs/palo/palo_traffic.csv
+format: "{f1}, [{receive_time} +0000],{serial},{type},{subtype}, {f2}, [{time_generated} +0000],{src},{dst},{natsrc},{natdst},{rule},{srcuser},{dstuser},{app},{vsys},{from},{to},{inbound_if},{outbound_if},{logset},{f3}, {sessionid},{repeatcnt},{sport},{dport},{natsport},{natdport},{flags},{proto},{action},{bytes},{bytes_sent},{bytes_received},{packets},{start},{elapsed},{category},{f4},{seqno},{actionflags},{srcloc},{dstloc},{f5},{pkts_sent},{pkts_received},{session_end_reason},{dg_hier_level_1},{dg_hier_level_2}, {dg_hier_level_3}, {dg_hier_level_4},{vsys_name},{device_name},{action_source},{src_uuid},{dst_uuid},{tunnelid/imsi},{monitortag/imei},{parent_session_id},{parent_start_time},{tunnel},{assoc_id},{chunks},{chunks_sent},{chunks_received},{rule_uuid},{http2_connection},{link_change_count},{policy_id},{link_switches},{sdwan_cluster},{sdwan_device_type},{sdwan_cluster_type},{sdwan_site},{dynusergroup_name}
+"
+frequency:
+  seconds: 5
+offset:
+  seconds: 0
+jitter:
+  seconds: 5
+amount: 50
+fields:
+  f1:
+    type: integer
+    min: 0
+    max: 10
+  receive_time:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  serial: 
+    type: enum
+    values: [001234567890002, 001234567890003, 001234567890004, 001234567890005]
+  type: 
+    type: enum
+    values: [TRAFFIC]
+  subtype: 
+    type: enum
+    values: [START, END, DROP, DENY]
+  f2:
+    type: integer
+    min: 0
+    max: 10
+  time_generated:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  src:
+    type: ip
+  dst:
+    type: ip
+  natsrc:
+    type: ip
+  natdst:
+    type: ip
+  rule: 
+    type: enum
+    values: [rule_name1, rule_name2, rule_name3, rule_name4, rule_name5, rule_name6, rule_name7, rule_name8]
+  srcuser:
+    type: enum
+    values: [bsmith, vagrant, administrator, brandon, po, napoleon.dynamite, will.smith, danny.targaryen, kal.el, dawn]
+  dstuser:
+    type: enum 
+    values: [bsmith, vagrant, administrator, brandon, po, napoleon.dynamite, will.smith, danny.targaryen, kal.el, dawn]
+  app:
+    type: enum
+    values: [dns, web_browsing, netbios_ns, ssl, ldap, smtp, ping]
+  vsys:
+    type: enum
+    values: [vsys1, vsys2, vsys3, vsys4, vsys5, vsys6, vsys7]
+  from:
+    type: enum
+    values: [outside, inside, dmz, critical_assets]
+  to:
+    type: enum
+    values: [outside, inside, dmz, critical_assets]
+  inbound_if:
+    type: enum
+    values: [ivlan_90, ivlan_91, ivlan_822, ivlan_711]
+  outbound_if:
+    type: enum
+    values: [ivlan_90, ivlan_91, ivlan_822, ivlan_711]
+  logset:
+    type: enum
+    values: [syslog, all_traffic, forward-sumo, logreset-both]
+  f3:
+    type: integer
+    min: 0
+    max: 9
+  sessionid:
+    type: integer
+    min: 30000000
+    max: 39999999
+  repeatcnt:
+    type: enum
+    values: [1, 2]
+  sport:
+    type: integer
+    min: 0
+    max: 64000
+  dport:
+    type: integer
+    min: 0
+    max: 64000
+  natsport:
+    type: integer
+    min: 0
+    max: 64000
+  natdport:
+    type: integer
+    min: 0
+    max: 64000
+  flags: 
+    type: enum 
+    values: [0x80000000, 0x40000000,0x20000000,0x10000000,0x08000000,0x02000000,0x01000000,0x00800000,0x00400000,0x00200000,0x00100000,0x00080000,0x00040000,0x00020000,0x00010000,0x00008000,0x00002000,0x00000800,0x00000400,0x00000100]
+  proto:
+    type: enum
+    values: [udp, tcp, icmp, ospfigp, ipv6, esp, etherip]
+  action:
+    type: enum
+    values: [allow, deny, alert , drop, drop_ICMP, reset_both, reset_client, reset_server]
+  bytes:
+    type: integer
+    min: 10
+    max: 5000
+  bytes_sent:
+    type: integer
+    min: 10
+    max: 5000
+  bytes_received:
+    type: integer
+    min: 10 
+    max: 5000
+  packets: 
+    type: integer
+    min: 1
+    max: 20
+  start:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  elapsed:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  category:
+    type: enum
+    values: [any, business_and_economy, shopping, computer_and_internet_info, content_delivery_networks, web_based_email, web_advertisements,  social_networking, unknown, news_and_media]
+  f4:
+    type: integer
+    min: 0
+    max: 9  
+  seqno:
+    type: integer
+    min: 0 
+    max: 10000000000
+  actionflags:
+    type: enum
+    values: [0x0, 0x800000000, 0x1]
+  srcloc: 
+    type: enum
+    values: [AF,AX,AL,DZ,AS,AD,AO,AI,AQ,AG,AR,AM,AW,AU,AT,AZ,BS,BH,BD,BB,BY,BE,BZ,BJ,BM,BT,BO,BQ,BA,BW,BV,BR,IO,BN,BG,BF,BI,CV,KH,CM,CA,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CI,HR,CU,CW,CY,CZ,DK,DJ,DM,DO,EC,EG,SV,GQ,ER,EE,SZ,ET,FK,FO,FJ,FI,FR,GF,PF,TF,GA,GM,GE,DE,GH,GI,GR,GL,GD,GP,GU,GT,GG,GN,GW,GY,HT,HM,VA,HN,HK,HU,IS,IN,ID,IR,IQ,IE,IM,IL,IT,JM,JP,JE,JO,KZ,KE,KI,KP,KR,KW,KG,LA,LV,LB,LS,LR,LY,LI,LT,LU,MO,MG,MW,MY,MV,ML,MT,MH,MQ,MR,MU,YT,MX,FM,MD,MC,MN,ME,MS,MA,MZ,MM,NA,NR,NP,NL,NC,NZ,NI,NE,NG,NU,NF,MK,MP,NO,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PL,PT,PR,QA,RE,RO,RU,RW,BL,SH,KN,LC,MF,PM,VC,WS,SM,ST,SA,SN,RS,SC,SL,SG,SX,SK,SI,SB,SO,ZA,GS,SS,ES,LK,SD,SR,SJ,SE,CH,SY,TW,TJ,TZ,TH,TL,TG,TK,TO,TT,TN,TR,TM,TC,TV,UG,UA,AE,GB,US,UM,UY,UZ,VU,VE,VN,VG,VI,WF,EH,YE,ZM,ZW]
+  dstloc:
+    type: enum
+    values: [AF,AX,AL,DZ,AS,AD,AO,AI,AQ,AG,AR,AM,AW,AU,AT,AZ,BS,BH,BD,BB,BY,BE,BZ,BJ,BM,BT,BO,BQ,BA,BW,BV,BR,IO,BN,BG,BF,BI,CV,KH,CM,CA,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CI,HR,CU,CW,CY,CZ,DK,DJ,DM,DO,EC,EG,SV,GQ,ER,EE,SZ,ET,FK,FO,FJ,FI,FR,GF,PF,TF,GA,GM,GE,DE,GH,GI,GR,GL,GD,GP,GU,GT,GG,GN,GW,GY,HT,HM,VA,HN,HK,HU,IS,IN,ID,IR,IQ,IE,IM,IL,IT,JM,JP,JE,JO,KZ,KE,KI,KP,KR,KW,KG,LA,LV,LB,LS,LR,LY,LI,LT,LU,MO,MG,MW,MY,MV,ML,MT,MH,MQ,MR,MU,YT,MX,FM,MD,MC,MN,ME,MS,MA,MZ,MM,NA,NR,NP,NL,NC,NZ,NI,NE,NG,NU,NF,MK,MP,NO,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PL,PT,PR,QA,RE,RO,RU,RW,BL,SH,KN,LC,MF,PM,VC,WS,SM,ST,SA,SN,RS,SC,SL,SG,SX,SK,SI,SB,SO,ZA,GS,SS,ES,LK,SD,SR,SJ,SE,CH,SY,TW,TJ,TZ,TH,TL,TG,TK,TO,TT,TN,TR,TM,TC,TV,UG,UA,AE,GB,US,UM,UY,UZ,VU,VE,VN,VG,VI,WF,EH,YE,ZM,ZW]
+  f5:
+    type: integer
+    min: 0
+    max: 9
+  pkts_sent:
+    type: integer
+    min: 1
+    max: 5000
+  pkts_received:
+    type: integer
+    min: 1
+    max: 5000
+  session_end_reason:
+    type: enum
+    values: [threat, policy-deny, decrypt-cert-validation, decrypt-unsupport-param, decrypt-error, tcp-rst-from-client, tcp-rst-from-server, resources-unavailable , tcp-fin, tcp-reuse, decoder, unknown, n_a]
+  dg_hier_level_1:
+    type: integer
+    min: 12
+    max: 50
+  dg_hier_level_2:
+    type: integer
+    min: 12
+    max: 50
+  dg_hier_level_3:
+    type: integer
+    min: 12
+    max: 50
+  dg_hier_level_4:
+    type: integer
+    min: 12
+    max: 50
+  vsys_name:
+    type: enum
+    values: [firewall-1, firewall-2, firewall-site-alpha, firewall-site-bravo]
+  device_name: 
+    type: enum
+    values: [toastyBread, jabrowski, peanut, dunham]
+  action_source:
+    type: enum
+    values: [allow, deny, drop, reset-server, reset-client, reset-both]
+  src_uuid:
+    type: integer
+    min: 10000000000
+    max: 19999999999
+  dst_uuid:
+    type: integer
+    min: 10000000000
+    max: 19999999999
+  tunnelid/imsi:
+    type: integer
+    min: 10000000000
+    max: 19999999999
+  monitortag/imei:
+    type: integer
+    min: 10000000000
+    max: 19999999999
+  parent_session_id:
+    type: integer
+    min: 30000000
+    max: 39999999
+  parent_start_time:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  tunnel:
+    type: enum
+    values: [GRE, IPSec, OpenVPN, SSTP, L2TP, VXLAN, WireGuard]
+  assoc_id: 
+    type: integer
+    min: 10000000
+    max: 30000000
+  chunks:
+    type: integer
+    min: 0
+    max: 5000
+  chunks_sent:
+    type: integer
+    min: 0
+    max: 5000
+  chunks_received:
+    type: integer
+    min: 0
+    max: 5000
+  rule_uuid:
+    type: integer
+    min: 10000000000
+    max: 19999999999
+  http2_connection:
+    type: enum
+    values: [Parent session ID, 0 ]
+  link_change_count:
+    type: integer
+    min: 1000000
+    max: 1999999
+  policy_id:
+    type: enum
+    values: [the hunt for red october, interstellar, batman, superman]
+  link_switches:
+    type: enum
+    values: [link_name, link_tag, link_type, physical_interface, timestamp, bytes_read, bytes_written, link_health]
+  sdwan_cluster:
+    type: enum
+    values: [sdwan_cluster1, sdwan_cluster2, sdwan_cluster3, sdwan_cluster4]
+  sdwan_device_type:
+    type: enum
+    values: [hub, branch]
+  sdwan_cluster_type:
+    type: enum 
+    values: [mesh, hub-spoke]
+  sdwan_site:
+    type: enum
+    values: [sdwan_site1, sdwan_site2, sdwan_site3, sdwan_site4]
+  dynusergroup_name:
+    type: enum 
+    values: [marvel, dc, anime, comedy]
+  log_bytes:
+    type: integer
+    min: 2000
+    max: 5000
