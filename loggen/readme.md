@@ -1,4 +1,4 @@
-# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource python module '[log-generator](https://pypi.org/project/log-generator/)'. 
+# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource python module '[log-generator](https://pypi.org/project/log-generator/)'. *At this time, it does NOT support json formatted logs. I am working on a few workarounds!* 
 
 This is meant to be a quick and easy way to send data to your POV instances or demo environments. If you would like to contribute to the log sources, submit a pull request! The SE community will thank you :pray: 
 
