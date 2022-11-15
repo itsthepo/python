@@ -1,4 +1,4 @@
-# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource plugin 'Loggen. 
+# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource plugin '[Loggen](https://linux.die.net/man/1/loggen)'. 
 
 This is meant to be a quick and easy way to send data to your POV instances or demo environments. If you would like to contribute to the log sources, submit a pull request! The SE community will thank you :pray: 
 
