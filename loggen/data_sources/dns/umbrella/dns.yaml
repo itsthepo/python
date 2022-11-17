@@ -1,5 +1,5 @@
 name: Umbrella DNS
-file: /Users/brborodach/projects/python/loggen/example_logs/dns/umbrella.csv
+file: ~/projects/python/loggen/example_logs/dns/umbrella.csv
 format: "{timestamp},{most_granular_identity},{identities},{internal_ip},{external_ip},{action},{query_type},{response_code},{domain},{categories},{most_granular_identity_type},{identity_types},{blocked_categories}"
 frequency:
   seconds: 5
