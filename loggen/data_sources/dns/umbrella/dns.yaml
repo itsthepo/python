@@ -36,13 +36,13 @@ fields:
     values: [www.cionfs.com ,www.forumpro.com ,www.sosorank.com ,www.teamtop.com ,www.redcoon.com ,www.alberta.com ,www.postupim.com ,www.evplayer.com ,www.cbsnews.com ,www.mihindia.com ,www.rotikaya.com ,www.grabcad.com ,www.memoclic.com ,www.rutube.com ,www.kulina.com ,www.icscards.com ,www.pandion.com ,www.ihuanju.com ,www.incont.com ,www.htpmedia.com ,www.devryu.com ,www.gigantti.com ,www.nehumath.com ,www.rhostbh.com ,www.artinfo.com ,www.survstat.com ,www.triberr.com ,www.soukai.com ,www.ankawa.com ,www.lifeweek.com ,www.imbolt.com ,www.tisiwi.com ,www.itmedia.com ,www.midomi.com ,www.cehome.com ,www.artinfo.com ,www.duoyoo.com ,www.ikoula.com ,www.ihuanju.com ,www.onofre.com ,www.gendai.com ,www.caltrain.com ,www.gosloto.com ,www.gamebean.com ,www.clinique.com ,www.hackbase.com ,www.midomi.com ,www.ongame.com ,www.suntimes.com ,www.klintsy.com ,www.lipsum.com ,www.tlavideo.com ,www.cuasar.com ,www.fsaten.com ,www.noticias.com ,www.mombaby.com ,www.chaoji.com ,www.abreeder.com ,www.incont.com ,www.ioncube.com ,www.gamevui.com ,www.milenio.com ,www.gynetube.com ,www.lansik.com ,www.kabbalah.com ,www.sunland.com ,www.kimsufi.com ,www.myhack.com ,www.garnek.com ,www.sosorank.com ,www.wetmummy.com ,www.kunyue.com ,www.camsympa.com ,www.asspoint.com ,www.sprint.com ,www.akinator.com ,www.prophpbb.com ,www.smatch.com ,www.survstat.com ,www.fmworld.com ,www.gamefly.com ,www.nowloss.com ,www.politika.com ,www.hillnews.com ,www.najmsat.com ,www.menlook.com ,www.arikair.com ,www.soukai.com ,www.ruclicks.com ,www.okcupid.com ,www.asspoint.com ,www.chaddo.com ,www.mactrast.com ,www.kirula.com ,www.lefora.com ,www.smarter.com ,www.melablog.com ,www.downbank.com ,www.drumtv.com ,www.distimo.com ,www.sonnik.com ,www.tolmol.com ,www.bonton.com ,www.tamilcnn.com ,www.esdlife.com ,www.erowid.com ,www.newone.com ,www.numbeo.com ,www.eurobank.com ,www.chmail.com ,www.snapsort.com ,www.newswire.com ,www.sosorank.com ,www.chintai.com ,www.sunland.com ,www.dnsstuff.com ,www.moshimo.com ,www.carbuyer.com ,www.cupidplc.com ,www.gongkong.com ,www.steelers.com ,www.megalife.com ,www.appone.com ,www.golfnow.com ,www.ljworld.com, www.world-of-warcraft.com, www.league-of-legends.com]
   categories: 
     type: enum
-    values: [Malware, "Newly Seen Domains", "Command Control Callbacks", "Phishing Attacks", Dynamic_DNS, "Potentially Harmful Domains", "DNS Tunneling VPN", Cryptomining,"Proxy/Anonymizer", Adware, "Parked Domain", "Web Spam", "P2P", "Cloud Storage"]
+    values: [Malware, "Newly Seen Domains", "Command Control Callbacks", "Phishing Attacks", "Dynamic DNS", "Potentially Harmful Domains", "DNS Tunneling VPN", Cryptomining,"Proxy/Anonymizer", Adware, "Parked Domain", "Web Spam", "P2P", "Cloud Storage"]
   most_granular_identity_type:
     type: enum
     values: [AD_User]
   identity_types:
     type: enum
-    values: ["AD_User, Site Network", Site_Network]
+    values: ["AD User, Site Network", "Site Network"]
   blocked_categories:
     type: enum
     values: ["Allow List", "Deny List"]
