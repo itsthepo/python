@@ -1,0 +1,122 @@
+name: Proxy
+file: /Users/brborodach/projects/python/loggen/example_logs/proxy/umbrella.csv
+format: "{timestamp},{policy_identity_label},{internal_client_ip},{external_client_ip},{destination_ip},{content_type},{action},{url},{referer},{user_agent},{status_code},{request_size},{response_size},{response_body_size},{sha—sha256},{categories},{av_detections},{PUAs},{AMP_disposition},{AMP_malware_name},{AMP_score},{policy_identity_type},{blocked_categories},{identities},{identity_types},{request_method},{DLP_status},{certificate_errors},{file_name},{ruleset_ID},{rule_ID},{destination_list_IDs},{isolate_action},{file_action},{warn_status}"
+frequency:
+  seconds: 5
+offset:
+  seconds: 0
+jitter:
+  seconds: 2
+amount: 50
+fields:
+  timestamp:
+    type: timestamp
+    format: "%d/%b/%Y:%H:%M:%S"
+  policy_identity_label: 
+    type: enum
+    values: [ghostwheel, onosendai, wintermute, abulafia, ziggy, markforer, hactar, hal, eddie, mycroft, teramind, deepthought]
+  internal_client_ip: 
+    type: ip
+  external_client_ip: 
+    type: ip
+  destination_ip: 
+    type: ip
+  content_type:
+    type: enum
+    values: [application,audio,font,example,image,message,model,multipart,text,video]
+  action:
+    type: enum
+    values: [Allowed, Blocked]
+  url: 
+    type: enum
+    values: [www.google.com,www.cionfs.com ,www.forumpro.com ,www.sosorank.com ,www.teamtop.com ,www.redcoon.com ,www.alberta.com ,www.postupim.com ,www.evplayer.com ,www.cbsnews.com ,www.mihindia.com ,www.rotikaya.com ,www.grabcad.com ,www.memoclic.com ,www.rutube.com ,www.kulina.com ,www.icscards.com ,www.pandion.com ,www.ihuanju.com ,www.incont.com ,www.htpmedia.com ,www.devryu.com ,www.gigantti.com ,www.nehumath.com ,www.rhostbh.com ,www.artinfo.com ,www.survstat.com ,www.triberr.com ,www.soukai.com ,www.ankawa.com ,www.lifeweek.com ,www.imbolt.com ,www.tisiwi.com ,www.itmedia.com ,www.midomi.com ,www.cehome.com ,www.artinfo.com ,www.duoyoo.com ,www.ikoula.com ,www.ihuanju.com ,www.onofre.com ,www.gendai.com ,www.caltrain.com ,www.gosloto.com ,www.gamebean.com ,www.clinique.com ,www.hackbase.com ,www.midomi.com ,www.ongame.com ,www.suntimes.com ,www.klintsy.com ,www.lipsum.com ,www.tlavideo.com ,www.cuasar.com ,www.fsaten.com ,www.noticias.com ,www.mombaby.com ,www.chaoji.com ,www.abreeder.com ,www.incont.com ,www.ioncube.com ,www.gamevui.com ,www.milenio.com ,www.gynetube.com ,www.lansik.com ,www.kabbalah.com ,www.sunland.com ,www.kimsufi.com ,www.myhack.com ,www.garnek.com ,www.sosorank.com ,www.wetmummy.com ,www.kunyue.com ,www.camsympa.com ,www.asspoint.com ,www.sprint.com ,www.akinator.com ,www.prophpbb.com ,www.smatch.com ,www.survstat.com ,www.fmworld.com ,www.gamefly.com ,www.nowloss.com ,www.politika.com ,www.hillnews.com ,www.najmsat.com ,www.menlook.com ,www.arikair.com ,www.soukai.com ,www.ruclicks.com ,www.okcupid.com ,www.asspoint.com ,www.chaddo.com ,www.mactrast.com ,www.kirula.com ,www.lefora.com ,www.smarter.com ,www.melablog.com ,www.downbank.com ,www.drumtv.com ,www.distimo.com ,www.sonnik.com ,www.tolmol.com ,www.bonton.com ,www.tamilcnn.com ,www.esdlife.com ,www.erowid.com ,www.newone.com ,www.numbeo.com ,www.eurobank.com ,www.chmail.com ,www.snapsort.com ,www.newswire.com ,www.sosorank.com ,www.chintai.com ,www.sunland.com ,www.dnsstuff.com ,www.moshimo.com ,www.carbuyer.com ,www.cupidplc.com ,www.gongkong.com ,www.steelers.com ,www.megalife.com ,www.appone.com ,www.golfnow.com ,www.ljworld.com, "www.world-of-warcraft.com", "www.league-of-legends.com"]
+  referer:
+    type: enum 
+    values: [lehaw.ls,herki.au,bafetam.cv,ahuhe.de,hukezeh.ch,jepedoduz.ee,ozfeoj.va,neme.cl,bonge.va,jebguw.ba,ohkecpak.ky,som.us,zibiko.ie,jatgipi.ag,poc.dk,refga.au,sofi.ga,ekkap.ma,guchabob.sl,he.pe,tescudo.fm,nu.io,vihmu.co.uk,gokid.eh,powkarkif.cy,bu.tj,ze.org,iwaci.nf,ma.an,tesu.id,vorade.lr,lilbe.at,izo.sv,me.ms,jiponu.hr,oza.dj,igerik.tw,lerbepzu.eh,sicufme.bv,ubaop.ki,falug.yt,arucakzo.su,iwfec.fr,wuha.cg,kegfucot.uz,pu.mw,bazuv.it,viroj.pt,ce.ml,pe.cu,gumute.cy,puwci.py,duztat.kz,waabvok.lc,jugze.fr,ijuzobus.ve,wizacole.nr,zicguto.sa,rodwin.ch,lefivu.fr,ro.uz,goh.ga,sa.gt,hihup.lu,ega.sj,kodig.az,mitog.vu,avohente.ag,valgimop.sv,lij.ps,wiv.nf,do.mz,ruw.lv,kikkan.ee,wec.im,nela.va,av.gl,zamjuwoj.th,muucdi.pg,gudovmug.mr,lis.tm,ho.tn,tac.fj,se.mp,pi.er,je.zm,ipdo.ie,saloc.ro,apowugku.bf,jokus.rs,be.tg,pigi.ag,im.me,ac.io,cud.rw,amutumom.sa,goanees.mw,luvas.tl,sakal.fi,pizucbef.lc]
+  user_agent:
+    type: enum
+    values: ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1"]
+  status_code:
+    type: enum
+    values: [200, 201]
+  request_size: 
+    type: integer 
+    min: 0 
+    max: 5000
+  response_size: 
+    type: integer 
+    min: 0 
+    max: 5000
+  response_body_size: 
+    type: integer 
+    min: 0 
+    max: 5000
+  sha—sha256:
+    type: enum
+    values: [136e38485a00eb417f6a332f23385a88ba17a8400bf866ed77612b109ac6f288,bebfd769526acdcc707d664b5c7782bbd8cb779d941d5634c809dc472b5feee3,3340e351a1e63fca9767531ff12d26b77a2c58f958700e6a9b7e6a70d4c31a67,d0a620f115e37ab5ad9f862471e525bdcb68c1db274c7ce76c94289be5ea5831,bbab801b1d2ff41344beb1dca396c14e192b1f801c7ef8c0829205706f7622bb,bd6dbb4768660826a023b9055300624c1cec25374326f09c91a8a81fba592fac,0cc0b5758ec6e8c187a27606edc165ef79b8493a68945fe348f7014c6c8beeba,62da03b12a208df724c0f4574b508a166e7713f1585436279379a8e21467ac7b,c7c9d857ed2a83b6235017f028cd288ec077c26a29e03316806d39fb15eb960f,ef7faf57773d7a2d3e8e83c1f9ba394b1f0a07ee558142940555c42de254891a]
+  categories:
+    type: enum
+    values: [Malware, "Newly Seen Domains", "Command Control Callbacks", "Phishing Attacks", "Dynamic DNS", "Potentially Harmful Domains", "DNS Tunneling VPN", Cryptomining,"Proxy/Anonymizer", Adware, "Parked Domain", "Web Spam", "P2P", "Cloud Storage"]
+  av_detections: 
+    type: enum
+    values: [GJlueGqGBE,RifjDqJfVv,dNSFzrgoxv,RZwaacyjzv,HiVMUTfIjZ,NwJMdeCLRx,fwvLSumWQH,SxmGplwqpl,curSYPjaef,GDmwhmyTCf]
+  PUAs:
+    type: enum
+    values: [GJlueGqGBE,RifjDqJfVv,dNSFzrgoxv,RZwaacyjzv,HiVMUTfIjZ,NwJMdeCLRx,fwvLSumWQH,SxmGplwqpl,curSYPjaef,GDmwhmyTCf]
+  AMP_disposition:
+    type: enum
+    values: [Clean, Malicious, Unknown]
+  AMP_malware_name:
+    type: enum
+    values: [trojan, rat, "locky ransomware", "po virus"]
+  AMP_score:
+    type: integer
+    min: 0 
+    max: 100
+  policy_identity_type:
+    type: enum
+    values: ["AD User", Network, Site]
+  blocked_categories:
+    type: enum
+    values: [Malware, "Newly Seen Domains", "Command Control Callbacks", "Phishing Attacks", "Dynamic DNS", "Potentially Harmful Domains", "DNS Tunneling VPN", Cryptomining,"Proxy/Anonymizer", Adware, "Parked Domain", "Web Spam", "P2P", "Cloud Storage"]
+  identities:
+    type: enum
+    values: [ghostwheel, onosendai, wintermute, abulafia, ziggy, markforer, hactar, hal, eddie, mycroft, teramind, deepthought]
+  identity_types:
+    type: enum
+    values: [ghostwheel, onosendai, wintermute, abulafia, ziggy, markforer, hactar, hal, eddie, mycroft, teramind, deepthought]
+  request_method: 
+    type: enum
+    values: [GET,HEAD,POST,PUT,DELETE,CONNECT,OPTIONS,TRACE,PATCH]
+  DLP_status:
+    type: enum
+    values: [Blocked, Alert]
+  certificate_errors: 
+    type: enum
+    values: ["no error", "random error", "the most errors"]
+  file_name:
+    type: enum
+    values: ["test.js", "test.csv", "test.exe", "badstuff.exe", "hacked.ps1", "hacker.exe"]
+  ruleset_ID: 
+    type: integer
+    min: 0
+    max: 100
+  rule_ID:
+    type: integer
+    min: 0
+    max: 100
+  destination_list_IDs:
+    type: integer
+    min: 0
+    max: 100
+  isolate_action:
+    type: enum
+    values: [isolated, allowed]
+  file_action:
+    type: enum
+    values: [downloaded_original_file, blocked]
+  warn_status: 
+    type: enum
+    values: [warn-session, non-warn-session]
+  
+  

@@ -7,7 +7,8 @@ This is meant to be a quick and easy way to send data to your POV instances or d
 | [Firewalls](/loggen/data_sources/firewall/)     | [Palo](/loggen/data_sources/firewall/palo/palo_traffic.yaml), [FortiNet - WIP](/loggen/data_sources/firewall/fortinet/fortinet.yaml)
 | [EDR](/loggen/data_sources/edr/)     | [Crowdstrike - WIP](/loggen/data_sources/edr/crowdstrike/cs.yaml), [Sentinel One - WIP](/loggen/data_sources/edr/sentinelone/sentinelone.yaml)
 | [DNS](/loggen/data_sources/dns/) | [Bind DNS](/loggen/data_sources/dns/bind/dns.yaml), [Umbrella](/loggen/data_sources/dns/umbrella/)
-| [Web](/loggen/data_sources/web/) | [Apache](/loggen/data_sources/web/apache/apache2_4.yaml), [Nginx - WIP](/loggen/data_sources/web/nginx/nginx.yaml)        
+| [Web Server](/loggen/data_sources/web_server/) | [Apache](/loggen/data_sources/web_server/apache/apache2_4.yaml), [Nginx - WIP](/loggen/data_sources/web_server/nginx/nginx.yaml)
+| [Proxies](/loggen/data_sources/proxy/)         | [Umbrella](/loggen/data_sources/proxy/umbrella/umbrella-proxy.yaml)
 
 
 # How to use
