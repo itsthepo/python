@@ -1,0 +1,22 @@
+{
+    "data": [{
+            "Act": "int",
+            "Cphr": "cipher",
+            "Dir": "net_dir",
+            "IP": "ip",
+            "MsgId": "keep|<0000000000000000-11111111-2222-3333-4444-555555555555-000000@domain.com>",
+            "Rcpt": "emails",
+            "Sender": "emails",
+            "SpamInfo": "[]",
+            "SpamLimit": 0,
+            "SpamScore": 11,
+            "Subject": "Email Subject",
+            "TlsVer": "tls",
+            "aCode": "keep|00000-1111111111111111",
+            "acc": "Account",
+            "datetime": "date",
+            "headerFrom": "emails"
+        }
+    ],
+    "type": "keep|MTA"
+}

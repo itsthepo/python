@@ -17,8 +17,8 @@
 
 
 ## Supported String Types
-| Strings | Example | 
-| :-------------: |:-------------:|
+| Strings | Example | Notes |
+| :-------------: | :-------------: | :-------------: |
 ip | { json_key : "ip" }
 int | { json_key : "int" }
 user | { json_key : "user" }
@@ -29,3 +29,10 @@ command_line | { json_key : "command_line" }
 sha_256 | { json_key : "sha_256" }
 md5 | { json_key : "md5" }
 computer_name | { json_key : "computer_name" }
+net_dir | { json_key : "net_dir" }
+cipher | { json_key : "cipher" }
+emails | { json_key : "emails" }
+tls | { json_key : "tls" }
+date | { json_key : "date" } | Please note that you can specify a pattern if you like by leveraging [faker](https://faker.readthedocs.io/en/master/providers/faker.providers.date_time.html). To change the pattern, please go to line 117 in [v3.py](/loggen/v2/v3.py).  Ex. faker.date(pattern="%Y-%m-%d") <- This will generate a fake date in the format "YYYY-MM-DD". Please refer to their documentation if you need a specific format
+mitre_tactic | { json_key : "mitre_tactic" } |
+mitre_technique | { json_key : "mitre_technique" } | 

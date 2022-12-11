@@ -1,0 +1,52 @@
+{
+    "metadata": {
+        "customerIDString": "int",
+        "offset": 14947764,
+        "eventType": "keep|DetectionSummaryEvent",
+        "eventCreationTime": 1536846439000,
+        "version": "1.0"
+    },
+    "event": {
+        "ProcessStartTime": 1536846339,
+        "ProcessEndTime": 0,
+        "ProcessId": 38684386611,
+        "ParentProcessId": 38682494050,
+        "ComputerName": "computer_name",
+        "UserName": "user",
+        "DetectName": "Process Terminated",
+        "DetectDescription": "Terminated a process related to the deletion of backups,which is often indicative of ransomware\r\nactivity.",
+        "Severity": 4,
+        "SeverityName": "keep|High",
+        "FileName": "file_name",
+        "FilePath": "file_path",
+        "CommandLine": "command_line",
+        "SHA256String": "sha_256",
+        "MD5String": "md5",
+        "MachineDomain": "computer_name",
+        "FalconHostLink": "keep|https://falcon.crowdstrike.com/activity/detections/detail/abcdefghijklmnopqrstuvwxyz012345/12345678901?_cid=xxxxxxxxxxxxxxxxxx",
+        "SensorId": "abcdefghijklmnopqrstuvwxyz012345",
+        "DetectId": "ldt:abcdefghijklmnopqrstuvwxyz012345",
+        "LocalIP": "ip",
+        "MACAddress": "mac",
+        "Tactic": "mitre_tactic",
+        "Technique": "mitre_technique",
+        "Objective": "Falcon Detection Method",
+        "PatternDispositionDescription": "Prevention, process killed.",
+        "PatternDispositionValue": 16,
+        "PatternDispositionFlags": {
+            "Indicator": false,
+            "Detect": false,
+            "InddetMask": false,
+            "SensorOnly": false,
+            "Rooting": false,
+            "KillProcess": true,
+            "KillSubProcess": false,
+            "QuarantineMachine": false,
+            "QuarantineFile": false,
+            "PolicyDisabled": false,
+            "KillParent": false,
+            "OperationBlocked": false,
+            "ProcessBlocked": false
+        }
+    }
+}
