@@ -1,4 +1,4 @@
-# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource python module '[log-generator](https://pypi.org/project/log-generator/)'. V2 will handle all of your JSON needs. Currently working on the update to push to a hosted collector! 
+# This script was meant to facilitate easy log ingestion for SIEM vendors leveraging an opensource python module '[log-generator](https://pypi.org/project/log-generator/)'. If you have JSON logs that you would like to randomize, please see the [json_seeder](/seeder/json_seeder/)
 
 This is meant to be a quick and easy way to send data to your POV instances or demo environments. If you would like to contribute to the log sources, submit a pull request! The SE community will thank you :pray: 
 
