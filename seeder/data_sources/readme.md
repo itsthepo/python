@@ -2,10 +2,10 @@
 
 1. Creating a data source is relatively simple!
     ``` 
-    code loggen/data_sources/firewall/dns/dns.yaml
+    code seeder/data_sources/firewall/dns/dns.yaml
     ```
 *Here is an example of a dns one I threw together*
-![alt text](/loggen/screenshots/dns.png)
+![alt text](/seeder/screenshots/dns.png)
 
 
 2. The configuration file is written in yaml but is very straight forward
@@ -15,7 +15,7 @@
 name: DNS
 
 # The path to the file where to write the logs to
-file: /Users/brborodach/projects/python/loggen/example_logs/dns/dns.txt
+file: /Users/brborodach/projects/python/seeder/example_logs/dns/dns.txt
 
 # The format of the log
 format: "{date} ns1 named[{pid}]: client {ipaddress}#{port}: query: {query} IN {dns_type}"
@@ -73,4 +73,4 @@ fields:
 
 3. Hit save and you can now use your new configuration file :). If this is a data source that I don't have or a new file format/update please submit a PR and I will update!
 
-*Reminder if you need inspiraton you can leverage the [examples](/loggen/data_sources/) I have already created!*
+*Reminder if you need inspiraton you can leverage the [examples](/seeder/data_sources/) I have already created!*
