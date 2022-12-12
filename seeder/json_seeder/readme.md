@@ -10,7 +10,7 @@
 | [Mimecast](/seeder/json_seeder/data_sources/email_gateway/mimecast.json) | MTA 
 | [ProofPoint](/seeder/json_seeder/data_sources/email_gateway/proofpoint.json) | Clicked Block Event
 
-### How to use ### 
+## How to use ##
 
 
 ## 1. Open your example log, and replace the 'string' values with a [supported string type](#supported-string-types). If there are any ints or booleans, the script will handle that for you.
