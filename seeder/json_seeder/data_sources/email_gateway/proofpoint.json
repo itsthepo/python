@@ -1,0 +1,18 @@
+{
+    "data": {
+      "campaignId": "uuid",
+      "classification": "classifications",
+      "clickIP": "ip",
+      "clickTime": "date",
+      "messageID": "uuid",
+      "recipient": "emails",
+      "sender": "emails",
+      "senderIP": "ip",
+      "threatID": "keep|61f7622167144dba5e3ae4480eeee78b23d66f7dfed970cfc3d086cc0dabdf50",
+      "threatTime": "date",
+      "threatURL": "keep|https://threatinsight.proofpoint.com/...",
+      "url": "url",
+      "userAgent": "user_agent"
+    },
+    "message_type": "message_type"
+  }

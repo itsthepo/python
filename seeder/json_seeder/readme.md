@@ -1,7 +1,14 @@
 # JSON Log Seeder
 
-## STOP!!! If you are looking to create fake log data for other log formats (CEF, SYSLOG, etc), please see this [section](/seeder/readme.md). This script is meant to handle only json file as a template. 
-
+## STOP!!! If you are looking to create fake log data for other log formats (CEF, SYSLOG, etc), please see this [section](/seeder/readme.md). This script is meant to handle only json file as a template.  
+  
+  
+## Supported Log Sources (will continue to add)
+| Log Source | Notes |
+| :-------------: | :-------------: |
+| [Crowdstrike](/seeder/json_seeder/data_sources/edr/crowdstrike/cs-example.json) | DetectionSummaryEvent
+| [Mimecast](/seeder/json_seeder/data_sources/email_gateway/mimecast.json) | MTA 
+| [ProofPoint](/seeder/json_seeder/data_sources/email_gateway/proofpoint.json) | Clicked Block Event
 
 ### How to use ### 
 
@@ -50,3 +57,9 @@ tls | { json_key : "tls" }
 date | { json_key : "date" } | Please note that you can specify a pattern if you like by leveraging [faker](https://faker.readthedocs.io/en/master/providers/faker.providers.date_time.html). To change the pattern, please go to line 117 in [v3.py](/loggen/v2/v3.py).  Ex. faker.date(pattern="%Y-%m-%d") <- This will generate a fake date in the format "YYYY-MM-DD". Please refer to their documentation if you need a specific format
 mitre_tactic | { json_key : "mitre_tactic" } |
 mitre_technique | { json_key : "mitre_technique" } | 
+classifications | { json_key : "classifications" } | Malware, Phishing, Spam, PUA, ETC
+uuid | { json_key : "uuid" } | This will generate something like '8c6cfedd-3050-4d65-8c09-c5f65c38da81'
+url | { json_key : "url" } |
+user_agent | { json_key : "user_agent" } | 
+action |  { json_key : "action" } | allow, blocked, alert
+message_type |  { json_key : "message_type" } | blocked_click, allowed_click
