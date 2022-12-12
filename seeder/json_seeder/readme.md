@@ -9,16 +9,16 @@
 ## 1. Open your example log, and replace the 'string' values with a [supported string type](#supported-string-types). If there are any ints or booleans, the script will handle that for you.
 -  A full list of examples can be seen [here](/seeder/json_seeder/data_sources/). I used [Crowdstrike](/seeder/json_seeder/data_sources/edr/crowdstrike/cs-example.json) and [Mimecast](/seeder/json_seeder/data_sources/email_gateway/mimecast.json) for my testing and have linked them directly for ease of use. 
 - In the CS log, you can see there is a string for username. You will replace that string value with "user", because the script will read the "user" value and generate a random username. You will need to do this for all of the fields you want to randomize, again please check [supported string type](#supported-string-types). If you don't see one, please create a github issue and I will get to it when I can. 
-- *Please note, if you would like to KEEP the original value for a key, please just pre-append the value with ' ```keep |```. In the example CS log, ```keep|DetectionSummaryEvent``` will keep the origianl value of "DetectionSummaryEvent". If you want my script to replace that string then just leave it alone :). 
+- **Please note**, if you would like to KEEP the original value for a key, please just pre-append the value with ' ```keep |```. In the example CS log, ```keep|DetectionSummaryEvent```(also highlighted in the first screenshot below) will keep the origianl value of "DetectionSummaryEvent". If you want my script to replace that string then just leave it alone :). 
 
-### Example screenshot below:
+### Example CS Log:
 ![alt text](/seeder/json_seeder/screenshots/example-cs.png)
 
-## 2. After you have sanitzied the example file feed the file into the python script.
+## 2. After you have updated the example file with your randomized fields, feed the file into the python script.
 
 ![alt text](/seeder/json_seeder/screenshots/cli.png)
 
-## 3. After the script takes your templated json file it will prompt you for how many logs you would like to create, followed by a destination HTTPS Webhook and a source category. By default, this was made to support [Sumo Logic's HTTPS Endpoint](https://help.sumologic.com/docs/send-data/hosted-collectors/http-source/logs-metrics/#configure-an-httplogs-and-metrics-source) 
+## 3. After the script takes your updated json file it will prompt you for how many logs you would like to create, followed by a destination HTTPS Webhook and a source category. By default, this was made to support [Sumo Logic's HTTPS Endpoint](https://help.sumologic.com/docs/send-data/hosted-collectors/http-source/logs-metrics/#configure-an-httplogs-and-metrics-source), which is why it forces a sourceCategory. If you are using this for another purpose, be sure to update the webhook module [here](/seeder/json_seeder/webhook.py).
 
 ![alt text](/seeder/json_seeder/screenshots/full_cli.png)
 
