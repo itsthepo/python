@@ -18,7 +18,7 @@
 
 ![alt text](/seeder/json_seeder/screenshots/cli.png)
 
-## 3. After the script takes your updated json file it will prompt you for how many logs you would like to create, followed by a destination HTTPS Webhook and a source category. By default, this was made to support [Sumo Logic's HTTPS Endpoint](https://help.sumologic.com/docs/send-data/hosted-collectors/http-source/logs-metrics/#configure-an-httplogs-and-metrics-source), which is why it forces a sourceCategory. If you are using this for another purpose, be sure to update the webhook module [here](/seeder/json_seeder/webhook.py).
+## 3. After the script takes your updated json file it will prompt you for how many logs you would like to create, followed by a destination HTTPS Webhook and a source category. By default, this was made to support [Sumo Logic's HTTPS Endpoint](https://help.sumologic.com/docs/send-data/hosted-collectors/http-source/logs-metrics/#configure-an-httplogs-and-metrics-source), which is why it forces a sourceCategory. If you are using this for another purpose, be sure to update the headers variable found in the main file [here](/seeder/json_seeder/json_seeder.py).
 
 ![alt text](/seeder/json_seeder/screenshots/full_cli.png)
 
